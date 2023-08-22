@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     @objc
     func exampleThreeButtonTapped(){
         
-        let vc = TextViewController()
+        let vc = ExampleThreeViewController()
         
         present(vc,animated: true)
         

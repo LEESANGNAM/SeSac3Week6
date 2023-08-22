@@ -18,6 +18,7 @@
 		D6590D662A930A1B00F0E1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6590D642A930A1B00F0E1AD /* Main.storyboard */; };
 		D6590D682A930A1D00F0E1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6590D672A930A1D00F0E1AD /* Assets.xcassets */; };
 		D6590D6B2A930A1D00F0E1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6590D692A930A1D00F0E1AD /* LaunchScreen.storyboard */; };
+		D67E68A62A951D3F009CC5D8 /* ExampleThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68A52A951D3F009CC5D8 /* ExampleThreeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D6590D672A930A1D00F0E1AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6590D6A2A930A1D00F0E1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6590D6C2A930A1D00F0E1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D67E68A52A951D3F009CC5D8 /* ExampleThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleThreeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				D61624662A944679004CE7EB /* SnapViewController.swift */,
 				D61624682A945CD3004CE7EB /* ExampleOneViewController.swift */,
 				D616246C2A94DA8F004CE7EB /* ExampleTwoViewController.swift */,
+				D67E68A52A951D3F009CC5D8 /* ExampleThreeViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				D61624672A944679004CE7EB /* SnapViewController.swift in Sources */,
 				D616246D2A94DA8F004CE7EB /* ExampleTwoViewController.swift in Sources */,
 				D6590D632A930A1B00F0E1AD /* ViewController.swift in Sources */,
+				D67E68A62A951D3F009CC5D8 /* ExampleThreeViewController.swift in Sources */,
 				D616246B2A94792F004CE7EB /* LocationViewController.swift in Sources */,
 				D6590D5F2A930A1B00F0E1AD /* AppDelegate.swift in Sources */,
 				D6590D612A930A1B00F0E1AD /* SceneDelegate.swift in Sources */,
