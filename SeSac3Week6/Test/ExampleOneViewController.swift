@@ -34,7 +34,27 @@ class TextViewController: UIViewController {
         textField.font = .boldSystemFont(ofSize: 15)
         return textField
     }()
+    let dateTextField = {
+        let textField = UITextField()
+        textField.borderStyle = .none
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1
+        textField.placeholder = "날짜를 입력해주세요"
+        textField.textAlignment = .center
+        textField.font = .boldSystemFont(ofSize: 15)
+        return textField
+    }()
     
+    let bottomImageView = {
+        let view = UIImageView()
+        view.backgroundColor = .yellow
+        view.contentMode = .scaleAspectFill
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 1
+        return view
+    }()
+    
+    lazy var UIList:[UIView] = [photoImageView, titleTextField, dateTextField,bottomImageView]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +63,7 @@ class TextViewController: UIViewController {
         
         
         
-        for item in [photoImageView, titleTextField]{
+        for item in UIList{
             view.addSubview(item)
         }
         
@@ -67,9 +87,17 @@ class TextViewController: UIViewController {
             make.top.equalTo(photoImageView.snp.bottom).offset(20)
             make.leading.equalTo(20)
             make.trailing.equalTo(-20)
-//            make.leadingMargin.equalTo(20)
-//            make.trailingMargin.equalTo(-20)
             make.height.equalTo(50)
+        }
+        dateTextField.snp.makeConstraints { make in
+            make.top.equalTo(titleTextField.snp.bottom).offset(20)
+            make.leading.equalTo(20)
+            make.trailing.equalTo(-20)
+            make.height.equalTo(50)
+        }
+        bottomImageView.snp.makeConstraints { make in
+            make.bottom.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(dateTextField.snp.bottom).offset(20)
         }
     }
     

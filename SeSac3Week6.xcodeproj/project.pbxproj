@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		D61624642A94460A004CE7EB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D61624632A94460A004CE7EB /* SnapKit */; };
 		D61624672A944679004CE7EB /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61624662A944679004CE7EB /* SnapViewController.swift */; };
-		D61624692A945CD3004CE7EB /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61624682A945CD3004CE7EB /* TextViewController.swift */; };
+		D61624692A945CD3004CE7EB /* ExampleOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61624682A945CD3004CE7EB /* ExampleOneViewController.swift */; };
 		D616246B2A94792F004CE7EB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616246A2A94792F004CE7EB /* LocationViewController.swift */; };
+		D616246D2A94DA8F004CE7EB /* ExampleTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616246C2A94DA8F004CE7EB /* ExampleTwoViewController.swift */; };
 		D6590D5F2A930A1B00F0E1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6590D5E2A930A1B00F0E1AD /* AppDelegate.swift */; };
 		D6590D612A930A1B00F0E1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6590D602A930A1B00F0E1AD /* SceneDelegate.swift */; };
 		D6590D632A930A1B00F0E1AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6590D622A930A1B00F0E1AD /* ViewController.swift */; };
@@ -21,8 +22,9 @@
 
 /* Begin PBXFileReference section */
 		D61624662A944679004CE7EB /* SnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
-		D61624682A945CD3004CE7EB /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		D61624682A945CD3004CE7EB /* ExampleOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOneViewController.swift; sourceTree = "<group>"; };
 		D616246A2A94792F004CE7EB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		D616246C2A94DA8F004CE7EB /* ExampleTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTwoViewController.swift; sourceTree = "<group>"; };
 		D6590D5B2A930A1B00F0E1AD /* SeSac3Week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSac3Week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6590D5E2A930A1B00F0E1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6590D602A930A1B00F0E1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				D61624662A944679004CE7EB /* SnapViewController.swift */,
-				D61624682A945CD3004CE7EB /* TextViewController.swift */,
+				D61624682A945CD3004CE7EB /* ExampleOneViewController.swift */,
+				D616246C2A94DA8F004CE7EB /* ExampleTwoViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -163,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D61624692A945CD3004CE7EB /* TextViewController.swift in Sources */,
+				D61624692A945CD3004CE7EB /* ExampleOneViewController.swift in Sources */,
 				D61624672A944679004CE7EB /* SnapViewController.swift in Sources */,
+				D616246D2A94DA8F004CE7EB /* ExampleTwoViewController.swift in Sources */,
 				D6590D632A930A1B00F0E1AD /* ViewController.swift in Sources */,
 				D616246B2A94792F004CE7EB /* LocationViewController.swift in Sources */,
 				D6590D5F2A930A1B00F0E1AD /* AppDelegate.swift in Sources */,

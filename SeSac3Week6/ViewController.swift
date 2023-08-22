@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
-    let signButton = UIButton()
+    let exampleOneButton = UIButton()
+    let exampleTwoButton = UIButton()
+    let exampleThreeButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,13 +64,31 @@ class ViewController: UIViewController {
         passwordTextField.placeholder = "비밀번호 입력"
         
         
-        setLayoutAnchor()
+        setExampleThreeButtonLayoutAnchor()
+        setExampleTwoButtonLayoutAnchor()
+        setExampleOneButtonLayoutAnchor()
         
         
     }
     
     @objc
-    func signButtonTapped(){
+    func exampleOneButtonTapped(){
+        
+        let vc = TextViewController()
+        
+        present(vc,animated: true)
+        
+    }
+    @objc
+    func exampleTwoButtonTapped(){
+        
+        let vc = ExampleTwoViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true)
+        
+    }
+    @objc
+    func exampleThreeButtonTapped(){
         
         let vc = TextViewController()
         
@@ -76,22 +96,64 @@ class ViewController: UIViewController {
         
     }
     
-    func setLayoutAnchor(){
+    func setExampleOneButtonLayoutAnchor(){
         
-        signButton.addTarget(self, action: #selector(signButtonTapped), for: .touchUpInside)
+        exampleOneButton.addTarget(self, action: #selector(exampleOneButtonTapped), for: .touchUpInside)
         
-        view.addSubview(signButton)
-        signButton.translatesAutoresizingMaskIntoConstraints = false
-        signButton.backgroundColor = .yellow
-        signButton.tintColor = .red
-        signButton.setTitle("이동", for: .normal)
+        view.addSubview(exampleOneButton)
+        exampleOneButton.translatesAutoresizingMaskIntoConstraints = false
+        exampleOneButton.backgroundColor = .red
+        exampleOneButton.setTitle("Exampl_1이동", for: .normal)
+        exampleOneButton.setTitleColor(.black, for: .normal)
         
         
         NSLayoutConstraint.activate([
-            signButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            signButton.widthAnchor.constraint(equalToConstant: 300),
-            signButton.heightAnchor.constraint(equalToConstant: 50),
-            signButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            exampleOneButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            exampleOneButton.widthAnchor.constraint(equalToConstant: 300),
+            exampleOneButton.heightAnchor.constraint(equalToConstant: 50),
+            exampleOneButton.bottomAnchor.constraint(equalTo: exampleTwoButton.topAnchor,constant: -20)
+            
+        ])
+        
+    }
+    
+    func setExampleTwoButtonLayoutAnchor(){
+        
+        exampleTwoButton.addTarget(self, action: #selector(exampleTwoButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(exampleTwoButton)
+        exampleTwoButton.translatesAutoresizingMaskIntoConstraints = false
+        exampleTwoButton.backgroundColor = .orange
+        exampleTwoButton.setTitle("Exampl_2이동", for: .normal)
+        exampleTwoButton.setTitleColor(.black, for: .normal)
+        
+        
+        NSLayoutConstraint.activate([
+            exampleTwoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            exampleTwoButton.widthAnchor.constraint(equalToConstant: 300),
+            exampleTwoButton.heightAnchor.constraint(equalToConstant: 50),
+            exampleTwoButton.bottomAnchor.constraint(equalTo: exampleThreeButton.topAnchor,constant: -20)
+            
+        ])
+        
+    }
+    
+    func setExampleThreeButtonLayoutAnchor(){
+        
+        exampleThreeButton.addTarget(self, action: #selector(exampleThreeButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(exampleThreeButton)
+        exampleThreeButton.translatesAutoresizingMaskIntoConstraints = false
+        exampleThreeButton.backgroundColor = .yellow
+        exampleThreeButton.setTitle("Exampl_3이동", for: .normal)
+        exampleThreeButton.setTitleColor(.black, for: .normal)
+        
+        
+        NSLayoutConstraint.activate([
+            exampleThreeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            exampleThreeButton.widthAnchor.constraint(equalToConstant: 300),
+            exampleThreeButton.heightAnchor.constraint(equalToConstant: 50),
+            exampleThreeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             
         ])
         
