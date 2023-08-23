@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
+    let locationButton = UIButton()
     let exampleOneButton = UIButton()
     let exampleTwoButton = UIButton()
     let exampleThreeButton = UIButton()
@@ -67,10 +68,18 @@ class ViewController: UIViewController {
         setExampleThreeButtonLayoutAnchor()
         setExampleTwoButtonLayoutAnchor()
         setExampleOneButtonLayoutAnchor()
-        
+        setLocationButtonLayoutAnchor()
         
     }
-    
+    @objc
+    func locationButtonTapped(){
+        
+        let vc = LocationViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        
+        present(nav,animated: true)
+        
+    }
     @objc
     func exampleOneButtonTapped(){
         
@@ -95,6 +104,8 @@ class ViewController: UIViewController {
         present(vc,animated: true)
         
     }
+    
+    
     
     func setExampleOneButtonLayoutAnchor(){
         
@@ -154,6 +165,26 @@ class ViewController: UIViewController {
             exampleThreeButton.widthAnchor.constraint(equalToConstant: 300),
             exampleThreeButton.heightAnchor.constraint(equalToConstant: 50),
             exampleThreeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            
+        ])
+        
+    }
+    func setLocationButtonLayoutAnchor(){
+        
+        locationButton.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(locationButton)
+        locationButton.translatesAutoresizingMaskIntoConstraints = false
+        locationButton.backgroundColor = .yellow
+        locationButton.setTitle("location", for: .normal)
+        locationButton.setTitleColor(.black, for: .normal)
+        
+        
+        NSLayoutConstraint.activate([
+            locationButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            locationButton.widthAnchor.constraint(equalToConstant: 300),
+            locationButton.heightAnchor.constraint(equalToConstant: 50),
+            locationButton.bottomAnchor.constraint(equalTo: exampleOneButton.topAnchor,constant: -20)
             
         ])
         

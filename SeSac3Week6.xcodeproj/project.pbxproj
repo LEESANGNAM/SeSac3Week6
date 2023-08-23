@@ -19,6 +19,7 @@
 		D6590D682A930A1D00F0E1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6590D672A930A1D00F0E1AD /* Assets.xcassets */; };
 		D6590D6B2A930A1D00F0E1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6590D692A930A1D00F0E1AD /* LaunchScreen.storyboard */; };
 		D67E68A62A951D3F009CC5D8 /* ExampleThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68A52A951D3F009CC5D8 /* ExampleThreeViewController.swift */; };
+		D67E68A92A95FE5C009CC5D8 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68A82A95FE5C009CC5D8 /* Cinema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D6590D6A2A930A1D00F0E1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6590D6C2A930A1D00F0E1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D67E68A52A951D3F009CC5D8 /* ExampleThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleThreeViewController.swift; sourceTree = "<group>"; };
+		D67E68A82A95FE5C009CC5D8 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		D6590D5D2A930A1B00F0E1AD /* SeSac3Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				D67E68A72A95FE27009CC5D8 /* Location */,
 				D61624652A944642004CE7EB /* Test */,
 				D6590D5E2A930A1B00F0E1AD /* AppDelegate.swift */,
 				D6590D602A930A1B00F0E1AD /* SceneDelegate.swift */,
@@ -87,9 +90,17 @@
 				D6590D672A930A1D00F0E1AD /* Assets.xcassets */,
 				D6590D692A930A1D00F0E1AD /* LaunchScreen.storyboard */,
 				D6590D6C2A930A1D00F0E1AD /* Info.plist */,
-				D616246A2A94792F004CE7EB /* LocationViewController.swift */,
 			);
 			path = SeSac3Week6;
+			sourceTree = "<group>";
+		};
+		D67E68A72A95FE27009CC5D8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D616246A2A94792F004CE7EB /* LocationViewController.swift */,
+				D67E68A82A95FE5C009CC5D8 /* Cinema.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				D61624692A945CD3004CE7EB /* ExampleOneViewController.swift in Sources */,
 				D61624672A944679004CE7EB /* SnapViewController.swift in Sources */,
 				D616246D2A94DA8F004CE7EB /* ExampleTwoViewController.swift in Sources */,
+				D67E68A92A95FE5C009CC5D8 /* Cinema.swift in Sources */,
 				D6590D632A930A1B00F0E1AD /* ViewController.swift in Sources */,
 				D67E68A62A951D3F009CC5D8 /* ExampleThreeViewController.swift in Sources */,
 				D616246B2A94792F004CE7EB /* LocationViewController.swift in Sources */,
@@ -326,6 +338,7 @@
 				DEVELOPMENT_TEAM = Y7C6A3W353;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeSac3Week6/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 날씨에 대한 정보를 가지고 오기 위해 위치 정보가 필요해요";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -354,6 +367,7 @@
 				DEVELOPMENT_TEAM = Y7C6A3W353;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeSac3Week6/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 날씨에 대한 정보를 가지고 오기 위해 위치 정보가 필요해요";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
