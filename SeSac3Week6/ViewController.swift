@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
+    let genericButton = UIButton()
     let locationButton = UIButton()
     let exampleOneButton = UIButton()
     let exampleTwoButton = UIButton()
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
         setExampleTwoButtonLayoutAnchor()
         setExampleOneButtonLayoutAnchor()
         setLocationButtonLayoutAnchor()
-        
+        setGenericButtonLayoutAnchor()
     }
     @objc
     func locationButtonTapped(){
@@ -102,6 +103,12 @@ class ViewController: UIViewController {
         let vc = ExampleThreeViewController()
         
         present(vc,animated: true)
+        
+    }
+    @objc
+    func genericButtonTapped(){
+        
+        transition(viewController: GenericViewController.self, storyBoard: "Main", style: .presentFullNavigation)
         
     }
     
@@ -185,6 +192,26 @@ class ViewController: UIViewController {
             locationButton.widthAnchor.constraint(equalToConstant: 300),
             locationButton.heightAnchor.constraint(equalToConstant: 50),
             locationButton.bottomAnchor.constraint(equalTo: exampleOneButton.topAnchor,constant: -20)
+            
+        ])
+        
+    }
+    func setGenericButtonLayoutAnchor(){
+        
+        genericButton.addTarget(self, action: #selector(genericButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(genericButton)
+        genericButton.translatesAutoresizingMaskIntoConstraints = false
+        genericButton.backgroundColor = .yellow
+        genericButton.setTitle("genericButton", for: .normal)
+        genericButton.setTitleColor(.black, for: .normal)
+        
+        
+        NSLayoutConstraint.activate([
+            genericButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            genericButton.widthAnchor.constraint(equalToConstant: 300),
+            genericButton.heightAnchor.constraint(equalToConstant: 50),
+            genericButton.bottomAnchor.constraint(equalTo: locationButton.topAnchor,constant: -20)
             
         ])
         

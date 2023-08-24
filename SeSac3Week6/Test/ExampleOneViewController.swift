@@ -10,20 +10,23 @@ import SnapKit
 
 class TextViewController: UIViewController {
     
-//    func setImageView() -> UIImageView {
-//        let view = UIImageView()
-//        view.backgroundColor = .blue
-//        view.contentMode = .scaleAspectFill
-//        return view
-//    }
-    // 클로저
+    //1.
+    let picker = UIImagePickerController()
+    
+    
     let photoImageView = {
         let view = UIImageView()
         view.backgroundColor = .blue
         view.contentMode = .scaleAspectFill
         return view
     }()
-    
+    //    func setImageView() -> UIImageView {
+    //        let view = UIImageView()
+    //        view.backgroundColor = .blue
+    //        view.contentMode = .scaleAspectFill
+    //        return view
+    //    }
+        // 클로저
     let titleTextField = {
         let textField = UITextField()
         textField.borderStyle = .none
@@ -56,23 +59,29 @@ class TextViewController: UIViewController {
     
     lazy var UIList:[UIView] = [photoImageView, titleTextField, dateTextField,bottomImageView]
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
-        
-        
         for item in UIList{
             view.addSubview(item)
         }
-        
-//        [photoImageView, titleTextField].forEach {  in
-//            view.addSubview($0)
-//        }
-        
         setUpConstraints()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //2. 사용 가능한지 체크
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            print("갤러리 사용불가, 사용자에게 토스트/얼럿")
+            return
+        }
+//        let picker = UIColorPickerViewController() //UIFontPickerViewController()
+        picker.delegate = self
+        picker.sourceType = .camera  //.photoLibrary // 사진만 가져오는건 권한 설정 필요없다.
+        picker.allowsEditing = true
+        present(picker, animated: true)
         
     }
     
@@ -100,7 +109,22 @@ class TextViewController: UIViewController {
             make.top.equalTo(dateTextField.snp.bottom).offset(20)
         }
     }
-    
-    
+}
+
+extension TextViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+ 
+    //캔슬
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+        print(#function)
+    }
+    //사진 선택이나 카메라 촬영 직후호출
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            self.photoImageView.image = image
+            dismiss(animated: true)
+            
+        }
+    }
     
 }
