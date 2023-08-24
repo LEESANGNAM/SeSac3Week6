@@ -102,7 +102,7 @@ class ViewController: UIViewController {
     }
     @objc
     func customButtonTapped(){
-        transition(viewController: CustomViewController.self, style: .present)
+        transition(viewController: CustomViewController.self, style: .fullScreen)
     }
     
     @objc

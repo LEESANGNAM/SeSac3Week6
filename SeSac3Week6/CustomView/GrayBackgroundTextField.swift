@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BlackRadiusTextField: UITextField {
+class GrayBackgroundTextField: UITextField {
     
     // interface Builder를 사용하지 않고, UIView를 상속받은 custom Class를 코드로 구성할 때 사용되는 초기화 구문
     override init(frame: CGRect) { // UIView Init()
@@ -21,17 +21,15 @@ class BlackRadiusTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     func setUpTextField(){
-        borderStyle = .none
-        layer.borderColor = UIColor.black.cgColor
-        layer.borderWidth = 1
         layer.cornerRadius = 8
-        textColor = .black
+        textColor = .white
+        backgroundColor = .darkGray
         textAlignment = .center
         font = .boldSystemFont(ofSize: 15)
     }
-//    func setUpPlaceHolder(placeholder: String){
-//        self.placeholder = placeholder
-//    }
+    func setUpPlaceHolder(placeholder: String){
+        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor.systemGray4])
+    }
     
 }
 
