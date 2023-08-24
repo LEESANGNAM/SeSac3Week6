@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
+    let customTableButton = UIButton()
+    let customButton = UIButton()
     let genericButton = UIButton()
     let locationButton = UIButton()
     let exampleOneButton = UIButton()
@@ -31,7 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        view.backgroundColor = .white
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         
@@ -71,45 +73,41 @@ class ViewController: UIViewController {
         setExampleOneButtonLayoutAnchor()
         setLocationButtonLayoutAnchor()
         setGenericButtonLayoutAnchor()
+        customButtonLayoutAnchor()
+        customTableButtonLayoutAnchor()
     }
     @objc
     func locationButtonTapped(){
-        
-        let vc = LocationViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        
-        present(nav,animated: true)
-        
+        let vcType = LocationViewController.self
+        transition(viewController:vcType, style: .presentNavigation)
     }
     @objc
     func exampleOneButtonTapped(){
-        
-        let vc = TextViewController()
-        
-        present(vc,animated: true)
-        
+        let vcType = TextViewController.self
+        transition(viewController:vcType, style: .fullScreen)
     }
     @objc
     func exampleTwoButtonTapped(){
-        
-        let vc = ExampleTwoViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc,animated: true)
-        
+        let vcType = ExampleTwoViewController.self
+        transition(viewController:vcType, style: .fullScreen)
     }
     @objc
     func exampleThreeButtonTapped(){
-        
-        let vc = ExampleThreeViewController()
-        
-        present(vc,animated: true)
-        
+        let vcType = ExampleThreeViewController.self
+        transition(viewController:vcType, style: .present)
     }
     @objc
     func genericButtonTapped(){
-        
-        transition(viewController: GenericViewController.self, storyBoard: "Main", style: .presentFullNavigation)
-        
+        transition(viewController: GenericViewController.self, style: .presentFullNavigation)
+    }
+    @objc
+    func customButtonTapped(){
+        transition(viewController: CustomViewController.self, style: .present)
+    }
+    
+    @objc
+    func customTableButtonTapped(){
+        transition(viewController: CustomTableViewController.self, style: .present)
     }
     
     
@@ -120,7 +118,7 @@ class ViewController: UIViewController {
         
         view.addSubview(exampleOneButton)
         exampleOneButton.translatesAutoresizingMaskIntoConstraints = false
-        exampleOneButton.backgroundColor = .red
+        exampleOneButton.backgroundColor = .yellow
         exampleOneButton.setTitle("Exampl_1이동", for: .normal)
         exampleOneButton.setTitleColor(.black, for: .normal)
         
@@ -162,7 +160,7 @@ class ViewController: UIViewController {
         
         view.addSubview(exampleThreeButton)
         exampleThreeButton.translatesAutoresizingMaskIntoConstraints = false
-        exampleThreeButton.backgroundColor = .yellow
+        exampleThreeButton.backgroundColor = .red
         exampleThreeButton.setTitle("Exampl_3이동", for: .normal)
         exampleThreeButton.setTitleColor(.black, for: .normal)
         
@@ -182,7 +180,7 @@ class ViewController: UIViewController {
         
         view.addSubview(locationButton)
         locationButton.translatesAutoresizingMaskIntoConstraints = false
-        locationButton.backgroundColor = .yellow
+        locationButton.backgroundColor = .green
         locationButton.setTitle("location", for: .normal)
         locationButton.setTitleColor(.black, for: .normal)
         
@@ -202,7 +200,7 @@ class ViewController: UIViewController {
         
         view.addSubview(genericButton)
         genericButton.translatesAutoresizingMaskIntoConstraints = false
-        genericButton.backgroundColor = .yellow
+        genericButton.backgroundColor = .systemBlue
         genericButton.setTitle("genericButton", for: .normal)
         genericButton.setTitleColor(.black, for: .normal)
         
@@ -212,6 +210,46 @@ class ViewController: UIViewController {
             genericButton.widthAnchor.constraint(equalToConstant: 300),
             genericButton.heightAnchor.constraint(equalToConstant: 50),
             genericButton.bottomAnchor.constraint(equalTo: locationButton.topAnchor,constant: -20)
+            
+        ])
+        
+    }
+    func customButtonLayoutAnchor(){
+        
+        customButton.addTarget(self, action: #selector(customButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(customButton)
+        customButton.translatesAutoresizingMaskIntoConstraints = false
+        customButton.backgroundColor = .blue
+        customButton.setTitle("customViewButton", for: .normal)
+        customButton.setTitleColor(.black, for: .normal)
+        
+        
+        NSLayoutConstraint.activate([
+            customButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            customButton.widthAnchor.constraint(equalToConstant: 300),
+            customButton.heightAnchor.constraint(equalToConstant: 50),
+            customButton.bottomAnchor.constraint(equalTo: genericButton.topAnchor,constant: -20)
+            
+        ])
+        
+    }
+    func customTableButtonLayoutAnchor(){
+        
+        customTableButton.addTarget(self, action: #selector(customTableButtonTapped), for: .touchUpInside)
+        
+        view.addSubview(customTableButton)
+        customTableButton.translatesAutoresizingMaskIntoConstraints = false
+        customTableButton.backgroundColor = .systemPurple
+        customTableButton.setTitle("customViewButton", for: .normal)
+        customTableButton.setTitleColor(.black, for: .normal)
+        
+        
+        NSLayoutConstraint.activate([
+            customTableButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            customTableButton.widthAnchor.constraint(equalToConstant: 300),
+            customTableButton.heightAnchor.constraint(equalToConstant: 50),
+            customTableButton.bottomAnchor.constraint(equalTo: customButton.topAnchor,constant: -20)
             
         ])
         

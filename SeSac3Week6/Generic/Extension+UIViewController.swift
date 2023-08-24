@@ -13,15 +13,16 @@ extension UIViewController{
         case presentNavigation // 네비게이션 임베드 된 present
         case presentFullNavigation // 네비게이션 임베드 된 fullscreen present
         case push
+        case fullScreen
     }
     /*
      "고래밥" -> String
      String -> Stirng.self > String.Type
      */
     // transition(viewController: GenericViewController.self, storyBoard: "Main", style: .present)
-    func transition<T: UIViewController>(viewController: T.Type, storyBoard: String, style: TransitionType) {
-        let sb = UIStoryboard(name: storyBoard, bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: String(describing: viewController)) as? T else { return }
+    func transition<T: UIViewController>(viewController: T.Type, style: TransitionType) {
+//        let sb = UIStoryboard(name: storyBoard, bundle: nil)
+        let vc = T()
         switch style {
         case .present:
             present(vc,animated: true)
@@ -34,6 +35,9 @@ extension UIViewController{
             present(nav,animated: true)
         case .push:
             navigationController?.pushViewController(vc, animated: true)
+        case .fullScreen:
+            vc.modalPresentationStyle = .fullScreen
+            present(vc,animated: true)
         }
         
         

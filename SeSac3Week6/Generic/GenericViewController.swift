@@ -19,7 +19,7 @@ class GenericViewController: UIViewController {
         title = "네비게이션"
         navigationController?.navigationBar.backgroundColor = .white
         let button = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: #selector(backButtonTapped))
-        navigationController?.navigationItem.leftBarButtonItem
+        navigationItem.leftBarButtonItem = button
         view.backgroundColor = .blue
         view.addSubview(sampleLabel)
         sampleLabel.backgroundColor = .yellow

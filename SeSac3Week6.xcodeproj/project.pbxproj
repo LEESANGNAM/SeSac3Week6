@@ -21,6 +21,9 @@
 		D67E68A92A95FE5C009CC5D8 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68A82A95FE5C009CC5D8 /* Cinema.swift */; };
 		D67E68AC2A96F0EF009CC5D8 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68AB2A96F0EF009CC5D8 /* GenericViewController.swift */; };
 		D67E68AE2A96F11B009CC5D8 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68AD2A96F11B009CC5D8 /* Extension+UIViewController.swift */; };
+		D67E68B12A971CE1009CC5D8 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68B02A971CE1009CC5D8 /* CustomViewController.swift */; };
+		D67E68B32A971E98009CC5D8 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68B22A971E98009CC5D8 /* BlackRadiusTextField.swift */; };
+		D67E68B72A972A32009CC5D8 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68B62A972A32009CC5D8 /* CustomTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		D67E68A82A95FE5C009CC5D8 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
 		D67E68AB2A96F0EF009CC5D8 /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 		D67E68AD2A96F11B009CC5D8 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		D67E68B02A971CE1009CC5D8 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		D67E68B22A971E98009CC5D8 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
+		D67E68B62A972A32009CC5D8 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		D6590D5D2A930A1B00F0E1AD /* SeSac3Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				D67E68AF2A971CAC009CC5D8 /* CustomView */,
 				D67E68AA2A96F0D3009CC5D8 /* Generic */,
 				D67E68A72A95FE27009CC5D8 /* Location */,
 				D61624652A944642004CE7EB /* Test */,
@@ -112,6 +119,16 @@
 				D67E68AD2A96F11B009CC5D8 /* Extension+UIViewController.swift */,
 			);
 			path = Generic;
+			sourceTree = "<group>";
+		};
+		D67E68AF2A971CAC009CC5D8 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D67E68B02A971CE1009CC5D8 /* CustomViewController.swift */,
+				D67E68B62A972A32009CC5D8 /* CustomTableViewController.swift */,
+				D67E68B22A971E98009CC5D8 /* BlackRadiusTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +209,9 @@
 			files = (
 				D61624692A945CD3004CE7EB /* ExampleOneViewController.swift in Sources */,
 				D61624672A944679004CE7EB /* SnapViewController.swift in Sources */,
+				D67E68B32A971E98009CC5D8 /* BlackRadiusTextField.swift in Sources */,
 				D67E68AC2A96F0EF009CC5D8 /* GenericViewController.swift in Sources */,
+				D67E68B12A971CE1009CC5D8 /* CustomViewController.swift in Sources */,
 				D67E68AE2A96F11B009CC5D8 /* Extension+UIViewController.swift in Sources */,
 				D616246D2A94DA8F004CE7EB /* ExampleTwoViewController.swift in Sources */,
 				D67E68A92A95FE5C009CC5D8 /* Cinema.swift in Sources */,
@@ -200,6 +219,7 @@
 				D67E68A62A951D3F009CC5D8 /* ExampleThreeViewController.swift in Sources */,
 				D616246B2A94792F004CE7EB /* LocationViewController.swift in Sources */,
 				D6590D5F2A930A1B00F0E1AD /* AppDelegate.swift in Sources */,
+				D67E68B72A972A32009CC5D8 /* CustomTableViewController.swift in Sources */,
 				D6590D612A930A1B00F0E1AD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
