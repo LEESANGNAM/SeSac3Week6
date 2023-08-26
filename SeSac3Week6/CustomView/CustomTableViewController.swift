@@ -16,11 +16,23 @@ struct Sample{
 
 
 class CustomTableViewController: UIViewController {
-    let tableView = {
+    // viewDidLoad 보다 클로저 구문이 먼저 실행이 됨
+    //
+    lazy var tableView = {
         let view = UITableView()
         view.rowHeight = UITableView.automaticDimension
+        view.dataSource = self
+        view.delegate = self
+        view.register(CustomTableViewCell.self, forCellReuseIdentifier: "customCell")
         return view
     }()
+    
+    let imageView = {
+        let view = PosterImageView(frame:.zero)
+        return view
+    }()
+    
+    
     
     var sampleList = [
     Sample(text: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트aabcasxsxsxsasdjklfhaksdlfhlksdhflhdkhdkjfhsdfhklasjhflksjdf트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트", isSelect: false),
@@ -43,12 +55,11 @@ class CustomTableViewController: UIViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "customCell")
-        
+        view.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.size.equalTo(200)
+            make.center.equalTo(view)
+        }
     }
     
 }
@@ -60,10 +71,10 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell")!
-        cell.textLabel?.numberOfLines = sampleList[indexPath.row].isSelect ? 0 : 2
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? CustomTableViewCell else { return UITableViewCell() }
+        cell.label.numberOfLines = sampleList[indexPath.row].isSelect ? 0 : 2
         
-        cell.textLabel?.text = sampleList[indexPath.row].text
+        cell.label.text = sampleList[indexPath.row].text
         return cell
     }
     

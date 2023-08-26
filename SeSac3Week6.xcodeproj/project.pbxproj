@@ -25,6 +25,9 @@
 		D67E68B32A971E98009CC5D8 /* GrayBackgroundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68B22A971E98009CC5D8 /* GrayBackgroundTextField.swift */; };
 		D67E68B72A972A32009CC5D8 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68B62A972A32009CC5D8 /* CustomTableViewController.swift */; };
 		D67E68B92A97A056009CC5D8 /* WhiteBackgroundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68B82A97A056009CC5D8 /* WhiteBackgroundButton.swift */; };
+		D67E68BB2A982AFF009CC5D8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68BA2A982AFF009CC5D8 /* CustomTableViewCell.swift */; };
+		D67E68BD2A9840B4009CC5D8 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68BC2A9840B4009CC5D8 /* PosterImageView.swift */; };
+		D67E68C02A984B71009CC5D8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E68BF2A984B71009CC5D8 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		D67E68B22A971E98009CC5D8 /* GrayBackgroundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayBackgroundTextField.swift; sourceTree = "<group>"; };
 		D67E68B62A972A32009CC5D8 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		D67E68B82A97A056009CC5D8 /* WhiteBackgroundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBackgroundButton.swift; sourceTree = "<group>"; };
+		D67E68BA2A982AFF009CC5D8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D67E68BC2A9840B4009CC5D8 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
+		D67E68BF2A984B71009CC5D8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		D6590D5D2A930A1B00F0E1AD /* SeSac3Week6 */ = {
 			isa = PBXGroup;
 			children = (
+				D67E68BE2A984B17009CC5D8 /* Onboarding */,
 				D67E68AF2A971CAC009CC5D8 /* CustomView */,
 				D67E68AA2A96F0D3009CC5D8 /* Generic */,
 				D67E68A72A95FE27009CC5D8 /* Location */,
@@ -128,10 +135,20 @@
 			children = (
 				D67E68B02A971CE1009CC5D8 /* CustomViewController.swift */,
 				D67E68B62A972A32009CC5D8 /* CustomTableViewController.swift */,
+				D67E68BA2A982AFF009CC5D8 /* CustomTableViewCell.swift */,
 				D67E68B22A971E98009CC5D8 /* GrayBackgroundTextField.swift */,
 				D67E68B82A97A056009CC5D8 /* WhiteBackgroundButton.swift */,
+				D67E68BC2A9840B4009CC5D8 /* PosterImageView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D67E68BE2A984B17009CC5D8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D67E68BF2A984B71009CC5D8 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,16 +229,19 @@
 			files = (
 				D61624692A945CD3004CE7EB /* ExampleOneViewController.swift in Sources */,
 				D61624672A944679004CE7EB /* SnapViewController.swift in Sources */,
+				D67E68BB2A982AFF009CC5D8 /* CustomTableViewCell.swift in Sources */,
 				D67E68B32A971E98009CC5D8 /* GrayBackgroundTextField.swift in Sources */,
 				D67E68AC2A96F0EF009CC5D8 /* GenericViewController.swift in Sources */,
 				D67E68B12A971CE1009CC5D8 /* CustomViewController.swift in Sources */,
 				D67E68AE2A96F11B009CC5D8 /* Extension+UIViewController.swift in Sources */,
+				D67E68C02A984B71009CC5D8 /* OnboardingViewController.swift in Sources */,
 				D616246D2A94DA8F004CE7EB /* ExampleTwoViewController.swift in Sources */,
 				D67E68A92A95FE5C009CC5D8 /* Cinema.swift in Sources */,
 				D6590D632A930A1B00F0E1AD /* ViewController.swift in Sources */,
 				D67E68A62A951D3F009CC5D8 /* ExampleThreeViewController.swift in Sources */,
 				D616246B2A94792F004CE7EB /* LocationViewController.swift in Sources */,
 				D6590D5F2A930A1B00F0E1AD /* AppDelegate.swift in Sources */,
+				D67E68BD2A9840B4009CC5D8 /* PosterImageView.swift in Sources */,
 				D67E68B72A972A32009CC5D8 /* CustomTableViewController.swift in Sources */,
 				D67E68B92A97A056009CC5D8 /* WhiteBackgroundButton.swift in Sources */,
 				D6590D612A930A1B00F0E1AD /* SceneDelegate.swift in Sources */,

@@ -81,6 +81,13 @@ class CustomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        setUpUI()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    func setUpUI(){
         view.backgroundColor = .black
        
         setUpSignStackViewElementConstraint()
@@ -91,9 +98,8 @@ class CustomViewController: UIViewController {
         setUpSignStackViewElementConstraint()
         addTitleLabel()
         
-        
-        // Do any additional setup after loading the view.
     }
+    
     
     func addTitleLabel(){
         view.addSubview(titleLabel)
